@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling for the entire document */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f3f3;
+    color: #333;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("Images/bg1.jpeg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-section, .right-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.right-section {
+    flex: 2;
+}
+
+h2 {
+    color: #5f968e;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #5f968e;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: decimal;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-intro p {
+    margin-top: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dean-container {
+    display: flex; /* Align children in a row */
+    justify-content: space-between; /* Space out the items */
+    flex-wrap: wrap; /* Allows wrapping if there's not enough space */
+}
+
+.dean-col {
+    flex: 1; /* Ensures each column takes equal space */
+    margin: 10px; /* Space between columns */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Add padding for better spacing */
+    /* border: 1px solid #ddd; */ /* Removed border */
+    border-radius: 10px; /* Optional: rounded corners */
+    background-color: transparent; /* Set background color to transparent */
+}
+
+.dean-col img {
+    width: 200px; /* Set a fixed width for all images */
+    height: 200px; /* Ensure uniform height */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px 0; /* Space above and below the image */
+    border: 5px solid #504e4e; /* Border around images */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    transition: transform 0.3s ease; /* Smooth transition for zoom effect */
+}
+
+.dean-col img:hover {
+    transform: scale(1.2); /* Zoom in by 20% */
+}
+
+.dean-col h3 {
+    margin-top: 16px; /* Top margin */
+    margin-bottom: 15px; /* Bottom margin */
+    text-align: center; /* Align text to the left */
+    text-decoration: underline; /* Underline text */
+    text-decoration-color: #5b955b; /* Pastel green color for underline */
+    text-underline-offset: 15px; /* Adjust distance of underline from text */
+    font-size: 20px; /* Set font size */
+    color: #164829; /* Set text color */
+}
+
+.dean-col h4 {
+    padding: 0; /* Remove padding */
+    color: #164829; /* Set text color */
+    font-size: 20px; /* Set font size */
+    font-weight: 600; /* Bold font */
+    line-height: 30px; /* Set line height */
+    transition: color 0.3s ease, font-size 0.3s ease, letter-spacing 0.3s ease; /* Smooth transition for color, size, and spacing */
+    margin: 10px 0; /* Uniform margin above and below */
+}
+
+.dean-col h4:hover {
+    color: #1e6b43; /* Change to a lighter green on hover */
+    font-size: 22px; /* Slightly increase font size */
+    cursor: pointer; /* Change cursor to pointer */
+    letter-spacing: 1px; /* Add letter spacing for a subtle effect */
+    transform: scale(1.05); /* Scale up slightly on hover */
+}
+
+
+
+.data-section {
+    display: block; /* Keep the display property */
+    opacity: 0;
+    transition: opacity 0.5s ease; /* Smooth transition */
+    height: 0;
+    overflow: hidden;
+}
+
+.data-section.active {
+    opacity: 1;
+    height: auto;
+}
+.about-us {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-between; /* Distribute space between items */
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    flex: 1; /* Allow each column to grow equally */
+    padding: 30px; /* Add padding for spacing */
+}
+.text-container {
+    background-color: rgb(186, 214, 187); /* White background for the container */
+    padding: 10px 20px; /* Add padding for space around the text */
+    border-radius: 10px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for a raised effect */
+    text-align: justify; /* Justify the text on both sides */
+    margin-top: 10px; /* Add some space above the container */
+}
+.text-container h5 {
+    margin: 0; /* Remove default margin from h5 */
+    font-size: 20px; /* Adjust the size as needed */
+    color: #413e3e; /* Change to your desired color (e.g., tomato color) */
+    font-weight: normal; /* Reduce the boldness to normal */
+    line-height: 1.2; /* Increase line spacing (adjust as needed) */
+}
+
+
+
+.image-container {
+    position: relative; /* Position relative for absolute children */
+    overflow: hidden; /* Hide any overflow from child elements */
+
+}
+
+.campus-col {
+    position: relative; /* Needed to position the overlay logo */
+}
+
+.about-col img {
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.overlay-logo {
+    position: absolute; /* Position the logo absolutely */
+    top: 0; /* Align to the top */
+    left: -100%; /* Start completely off-screen to the left */
+    width: 100%; /* Full width of the parent container */
+    height: 100%; /* Full height of the parent container */
+    object-fit: contain; /* Ensure the logo scales correctly */
+    opacity: 0.8; /* Adjusted to 0.4 for a darker transparent effect */
+    transition: left 0.5s ease; /* Smooth transition only for sliding effect */
+    background: rgba(0, 0, 0, 0.3); /* Optional dark overlay for better visibility */
+}
+
+.image-container:hover .overlay-logo {
+    left: 0; /* Slide the logo into view on hover */
+    /* No opacity change on hover */
+}
+
+.about-col h1 {
+    padding-top: 0;
+    margin-top: 20px; /* Adjust top margin */
+}
+
+.about-col p {
+    padding: 15px 0 25px;
+    color: #343232c9;
+    line-height: 35px;
+    font-size: 25px; /* Adjust the size as needed */
+}
+
+
+.overlay-logo {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: transform 0.5s ease, left 0.5s ease;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 10%; /* Adjust this value to change vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 24px; /* Adjust font size */
+    font-weight: bold;
+    z-index: 10; /* Ensure text appears on top */
+    text-align: center;
+    width: 100%; /* Make sure text is centered over the image */
+    opacity: 0.8; /* Set initial transparency */
+    pointer-events: none; /* Prevent interfering with hover effects */
+}
+.image-container:hover .overlay-logo {
+    left: 0;
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1;
+}
