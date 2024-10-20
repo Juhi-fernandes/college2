@@ -1,0 +1,980 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FCRIT VASHI Navi Mumbai</title>
+    <meta name="description" content="#">
+    <meta name="keywords" content="FCRIT">
+    <meta name="author" content="FCRIT">
+    <meta name="robots" content="index, follow">
+    <meta name="og:title" content="FCRIT VASHI, Navi Mumbai">
+    <meta name="og:image" content="https://dmce.ac.in/assets/img/dmce.png">
+    <meta name="og:url" content="https://dmce.ac.in/"> 
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="FCRIT">
+    <meta name="twitter:title" content="Datta Meghe College of Engineering, Airoli, Navi Mumbai">
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&amp;display=swap" rel="stylesheet">
+    <link href="css/swiper-bundle.min.css" rel="stylesheet">
+	<script src="
+	https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+	"></script>
+	<link href="
+	https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
+	" rel="stylesheet">
+
+    <style>
+	
+/* Marquee styles */
+.marquee {
+  --gap: 1rem;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: paused !important;
+  }
+}
+
+/* Enable animation */
+.enable-animation .marquee__content {
+  animation: scroll 30s linear infinite;
+}
+
+/* Reverse animation */
+.marquee--reverse .marquee__content {
+  animation-direction: reverse;
+}
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+}
+
+/* Attempt to size parent based on content. Keep in mind that the parent width is equal to both content containers that stretch to fill the parent. */
+.marquee--fit-content {
+  max-width: fit-content;
+}
+
+/* A fit-content sizing fix: Absolute position the duplicate container. This will set the size of the parent wrapper to a single child container. Shout out to Olavi's article that had this solution ?? @link: https://olavihaapala.fi/2021/02/23/modern-marquee.html  */
+.marquee--pos-absolute .marquee__content:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Enable position absolute animation on the duplicate content (last-child) */
+.enable-animation .marquee--pos-absolute .marquee__content:last-child {
+  animation-name: scroll-abs;
+}
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Other page demo styles */
+.marquee__content > * {
+  color: white;
+  font-size: 16px;
+  margin: 2px;
+  padding: 0.2rem 2rem;
+  text-align: center;
+  font-weight: 300;
+}
+
+.marquee {
+  background-color:#1AAFBC;
+}
+
+ul.marquee__content{
+  margin-bottom: 0px;
+  background-color:#1AAFBC;
+}
+
+.marqueesection > * + * {
+  margin-block-start: 0.5rem;
+}
+.marquee__content{
+  list-style: none;
+}
+.marquee__content>li>svg{
+  color: var(--yellow);
+}
+
+:root {  
+  --purple: #ffc100;
+  --violet: #ff7400;
+  --pink: #ff0000;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  
+  to {
+    background-position: -200% center;
+  }
+}
+
+@keyframes scale {
+  from, to {
+    transform: scale(0);
+  }
+  
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+
+.starher > .magic {
+  display: inline-block;
+  position: relative;
+}
+
+.starher > .magic > .magic-star {
+  --size: clamp(8px, 1.5vw, 12px);
+  
+  animation: scale 700ms ease forwards;
+  display: block;
+  height: var(--size);
+  left: var(--star-left);
+  position: absolute;
+  top: var(--star-top);
+  width: var(--size);
+}
+
+.starher > .magic > .magic-star > svg {
+  animation: rotate 1000ms linear infinite;
+  display: block;
+  opacity: 0.7;
+}
+
+.starher > .magic > .magic-star > svg > path {
+  fill: var(--violet);
+}
+
+.starher > .magic > .magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--purple),
+    var(--violet),
+    var(--pink),
+    var(--purple)
+  );
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+
+.computerspreadnav{
+  background: #11b9b9!important;
+  padding: 0.5rem;
+  padding-top: 0px;
+}
+.computerspreadnavcontainer{
+  padding-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.computerspreadnavdropdown{
+  transform: translate3d(27px, 4px, 0px)!important;
+}
+@media screen and (max-width:992px) {
+  .computerspreadnav{
+    display: none;
+  } 
+}
+@media screen and (min-width:992px){
+  .morelinknavitem{
+	display:none;	
+  }
+
+}
+
+
+
+
+.threepanes{
+  display: flex;
+  gap: 40px;
+  align-items: stretch;
+  justify-content: center;
+}
+.threepanes>div{
+  flex: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.threepaneshead{
+  padding: 10px 15px;
+  background-color: var(--blue);
+  text-align: center;
+  font-size: 24px!important;
+}
+.threepanesbody{
+  border: 2px solid #d9d9d9;
+  border-top: 0px;
+  border-right: 0px;
+  padding: 10px 15px 10px 30px;
+  background-color: white;
+
+}
+.threepanesbody .threepaneslink{
+  display: block;
+  color: var(--pgrey);
+  font-size: 20px;
+  padding-bottom: 10px!important;
+  
+}
+.threepanesbody .threepaneslink:hover{
+  color: var(--yellow);
+  cursor: pointer;
+}
+
+.threepanesbody{
+  height: 400px;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width:998px) {
+  .threepanes{
+    flex-direction: column;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+.swiper-container-free-mode > .swiper-wrapper{
+  transition-timing-function : linear!important;
+}
+#nav-tab{
+	gap:0px,
+}
+.tab-pane{
+	padding:20px;
+	border-bottom:1px solid #D1D1D1;
+	border-left:1px solid #D1D1D1;
+	border-right:1px solid #D1D1D1;
+}
+@media screen and (max-width:992px){
+	.nav.nav-tabs{
+		flex-direction:column!important;
+	}
+	.splide__slide{
+		aspect-ratio:2!important;
+	}
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom:25px;
+}
+@media screen and (max-width:450px){
+	.ach-details h1{
+		font-size:16px!important;
+	}
+	.ach-details p{
+		font-size:12px!important;
+	}
+}
+.beyondlinks a{
+	font-size:16px!important;
+}
+.computerspreadnavcontainer1 .dropdown-menu{
+	translate:-10px 10px !important;	
+}
+#abtdrp .dropdown-menu{
+	translate:-31px 34px !important;
+}
+
+    </style>
+
+</head>
+
+
+
+<body data-bs-theme="light">
+<section class="computerspreadnav" style="padding:0.4rem 2rem">
+    <div class="container">
+        <div class="computerspreadnavcontainer" style="padding:0;border:none;">
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">Downloads</a>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">Feedback</a>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">Important Links</a>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">Circulars</a>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">Fee Payment</a>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">NIRF</a>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">IQAC</a>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="#">IIC</a>
+        </div>
+        
+    </div>
+  </section>
+    
+    <nav class="navbar navbar-expand-lg herobar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="dmcelogocontainer">
+                    <img class="dmcelogo" src="images/fcritlogo.webp" alt="">
+                    <div class="dmcetext">
+                        <p style="color:white!important;font-size:18px; text-align: center;">AGNEL CHARITIES
+                          <br>(An Autonomous Institute & Permanently Affiliated to University of Mumbai)</p>
+                        <h1 style="text-align: center;">FR. C. RODRIGUES INSTITUTE OF TECHNOLOGY</h1>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <div class="hamburger-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse notinpc" id="navbar-content">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0" style="margin-left: auto;">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="color: white!important;" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">History</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Vision & Mission</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Trustees</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Managing Director's Desk</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Principal's Desk</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Governance</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Affiliations</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Administration and Committees</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Institute's Roadmap/a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Service Regulation</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Qualifications and Eligiblity <br>Norms for Recruitment</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Managing Director's Desk</a></li>
+
+                            <li class="dropstart">
+                                <a href="#" class="dropdown-item dropdown-toggle" style="color: #10185a" data-bs-toggle="dropdown">Mandatory Disclosure</a>
+                                <ul class="dropdown-menu dropdown-submenu shadow">
+                                     <li><a class="dropdown-item" href="/about/disclosure.php" style="color: #10185a">Mandatory Disclosure</a></li>
+                                     <li><a class="dropdown-item" href="/about/staffpolicy.php" style="color: #10185a">Staff Policy</a></li>
+                                     <li><a class="dropdown-item" href="/about/audit.php" style="color: #10185a">Audit Report</a></li>
+                                </ul> 
+                            </li> 
+                        </ul>
+                    </li>
+<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admissions
+                        </a>
+                        <ul class="dropdown-menu" style="translate:0 60px;">
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="/admissions/admission.php?refreshRate=1&amp;id=c4ca4238a0b923820dcc509a6f75849b">Under Graduate (BE)</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="/admissions/admission.php?refreshRate=2&amp;id=c81e728d9d4c2f636f067f89cc14862c">Post Graduate (ME)</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="/admissions/admission.php?refreshRate=3&amp;id=eccbc87e4b5ce2fe28308fd9f2a7baf3">PhD</a></li>
+                                                    </ul>
+                    </li>
+
+		<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white;padding-right:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu">
+                                                  <li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=10&amp;id=d3d9446802a44259755d38e6d163e820" class="dropdown-item">Humanities and Science</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=6&amp;id=1679091c5a880faf6fb5e6087eb1b2dc" class="dropdown-item">Artificial Intelligence and Data Science Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=7&amp;id=8f14e45fceea167a5a36dedd4bea2543" class="dropdown-item">Mechanical Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=8&amp;id=c9f0f895fb98ab9159f51fd0297e236d" class="dropdown-item">Information Technology</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=3&amp;id=eccbc87e4b5ce2fe28308fd9f2a7baf3" class="dropdown-item">Civil &amp; Infrastructure Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=5&amp;id=e4da3b7fbbce2345d7772b0674a318d5" class="dropdown-item">Computer Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=2&amp;id=c81e728d9d4c2f636f067f89cc14862c" class="dropdown-item">Civil Engineering(NBA Accredited program)</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=4&amp;id=a87ff679a2f3e71d9181a67b7542122c" class="dropdown-item">Electronics and Telecommunication Engineering(Formarly Electronic Engineering, Since 1988)</a>
+                                                </li><li class="dropend">
+                          <a href="/departments/branch2.php?refreshRate=9&amp;id=45c48cce2e2d7fbdea1afc51c7c6ad26" class="dropdown-item">Chemical Engineering (NBA Accredited Program)</a>
+                      			
+
+                        </li></ul>
+        	 </li>
+
+                     <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white;padding-right:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Placements
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/placements/about.php" style="color: #10185a">Placements</a></li>
+<!--                            <li><a class="dropdown-item" href="#" style="color: #10185a">Internships</a></li> -->
+                            <li><a class="dropdown-item" href="/placements/mou.php" style="color: #10185a">MOUs &amp; Partnerships</a></li>
+                            <li><a class="dropdown-item" href="/placements/faculty.php" style="color: #10185a">Faculty</a></li>
+                        </ul>
+                    </div>
+			<li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" style="color: #fff" data-bs-toggle="dropdown">Examinations</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="/exams/document.php" style="color: #10185a">Document Verification</a></li>
+                                    <li><a class="dropdown-item" href="/exams/transcript.php" style="color: #10185a">Transcript</a></li>
+
+                                </ul>
+                            </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" style="color: white;padding-right:0px!important;" data-bs-toggle="dropdown">Approvals</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="/approvals/aicte.php" style="color: #10185a">AICTE</a></li>
+                                    <li><a class="dropdown-item" href="/approvals/university.php" style="color: #10185a">University Affiliation</a></li>
+
+                                </ul>
+                            </li>
+	              <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" style="color: white;padding-right:0px!important;" data-bs-toggle="dropdown">Academics</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="/academics/co&amp;po.php" style="color: #10185a">CO's and PO's</a></li>
+                                    <li><a class="dropdown-item" href="/academics/teacher.php" style="color: #10185a">Teaching Learning Process</a></li>
+                                    <li><a class="dropdown-item" href="/academics/student.php" style="color: #10185a">Student Satisfaction Reports</a></li>
+                                </ul>
+
+                     </li>
+			<li><a class="nav-link" style="color: #fff" href="/research/books.php">Research</a></li>
+			<li><a class="nav-link" style="color: #fff" href="/grievance/">Grievances</a></li>
+			<li><a class="nav-link" style="color: #fff" href="https://dmce.ac.in/alumni/dashboard.html">Alumni</a></li>
+                            <li><a class="nav-link" style="color: #fff" href="./NAAC/">NAAC</a></li>
+				<li><a class="nav-link" style="color: #fff" href="/nirf/nirf.php">NIRF</a></li>
+			<li><a class="nav-link" style="color: #fff" href="https://dmce.irins.org/">IRINS</a></li>
+				<li><a class="nav-link" style="color: #fff" href="https://sites.google.com/site/dmcecentrallibrary/">Library</a></li>
+<li><a class="nav-link" style="color: #fff" href="http://services.dmce.ac.in">ERP Login</a></li>
+                                        <li class="nav-item dropdown morelinknavitem">
+
+                        <a class="nav-link dropdown-toggle morelink" href="#" style="color: #10185a!important;padding-right:0px!important;" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                            <p style="color:white;">More</p><img src="images/hamburger.png" style="height:18px;" alt="">
+                        </a>
+                        <ul class="dropdown-menu shadow">
+                            <li class="dropstart">
+                                <a href="#" class="dropdown-item dropdown-toggle" style="color: #10185a" data-bs-toggle="dropdown">Governance</a>
+                                <ul class="dropdown-menu shadow">
+                                                                            <li><a style="color: #10185a" class="dropdown-item" href="/governance/cell.php?refreshRate=3&amp;id=eccbc87e4b5ce2fe28308fd9f2a7baf3">ANTI RAGGING COMMITTEE</a></li>
+                                                                            <li><a style="color: #10185a" class="dropdown-item" href="/governance/cell.php?refreshRate=5&amp;id=e4da3b7fbbce2345d7772b0674a318d5">GRIEVANCE AND REDRESSAL CELL</a></li>
+                                                                            <li><a style="color: #10185a" class="dropdown-item" href="/governance/cell.php?refreshRate=2&amp;id=c81e728d9d4c2f636f067f89cc14862c">WOMEN DEVELOPMENT CELL</a></li>
+                                                                            <li><a style="color: #10185a" class="dropdown-item" href="/governance/cell.php?refreshRate=4&amp;id=a87ff679a2f3e71d9181a67b7542122c">SC/ST COMMITTEE</a></li>
+                                                                            <li><a style="color: #10185a" class="dropdown-item" href="/governance/cell.php?refreshRate=6&amp;id=1679091c5a880faf6fb5e6087eb1b2dc">COLLEGE DEVELOPMENT COMMITTEE</a></li>
+                                                                            <li><a style="color: #10185a" class="dropdown-item" href="/governance/cell.php?refreshRate=7&amp;id=8f14e45fceea167a5a36dedd4bea2543">WOMEN GRIEVANCE/ICC CELL</a></li>
+                                                                            <li><a style="color: #10185a" class="dropdown-item" href="/governance/cell.php?refreshRate=1&amp;id=c4ca4238a0b923820dcc509a6f75849b">UHV-DMCE</a></li>
+                                    
+                                </ul>
+                            </li>                            
+                            
+                            <li class="dropstart">
+                                <a href="#" class="dropdown-item dropdown-toggle" style="color: #10185a" data-bs-toggle="dropdown">Entrepreneurship</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="/entrepreneurship/entrepreneurship.php" style="color: #10185a">About</a></li>
+                                    <li><a class="dropdown-item" href="/entrepreneurship/ecell.php" style="color: #10185a">E Cell</a></li>
+                                </ul>
+                            </li>
+                                          <li class="dropstart">
+                  <a href="#" class="dropdown-item dropdown-toggle" style="color: #10185a" data-bs-toggle="dropdown" data-bs-auto-close="outside">Student Clubs</a>
+                  <ul class="dropdown-menu dropdown-submenu shadow">
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">CSI</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=1&amp;id=c4ca4238a0b923820dcc509a6f75849b">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=1&amp;id=c4ca4238a0b923820dcc509a6f75849b">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=1&amp;id=c4ca4238a0b923820dcc509a6f75849b">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">EESA</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=7&amp;id=8f14e45fceea167a5a36dedd4bea2543">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=7&amp;id=8f14e45fceea167a5a36dedd4bea2543">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=7&amp;id=8f14e45fceea167a5a36dedd4bea2543">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">GDSC</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=5&amp;id=e4da3b7fbbce2345d7772b0674a318d5">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=5&amp;id=e4da3b7fbbce2345d7772b0674a318d5">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=5&amp;id=e4da3b7fbbce2345d7772b0674a318d5">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">FOMES</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=6&amp;id=1679091c5a880faf6fb5e6087eb1b2dc">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=6&amp;id=1679091c5a880faf6fb5e6087eb1b2dc">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=6&amp;id=1679091c5a880faf6fb5e6087eb1b2dc">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">SOCHE</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=8&amp;id=c9f0f895fb98ab9159f51fd0297e236d">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=8&amp;id=c9f0f895fb98ab9159f51fd0297e236d">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=8&amp;id=c9f0f895fb98ab9159f51fd0297e236d">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">IEEE</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=9&amp;id=45c48cce2e2d7fbdea1afc51c7c6ad26">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=9&amp;id=45c48cce2e2d7fbdea1afc51c7c6ad26">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=9&amp;id=45c48cce2e2d7fbdea1afc51c7c6ad26">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">ISTE</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=10&amp;id=d3d9446802a44259755d38e6d163e820">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=10&amp;id=d3d9446802a44259755d38e6d163e820">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=10&amp;id=d3d9446802a44259755d38e6d163e820">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">IETE</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=11&amp;id=6512bd43d9caa6e02c990b0a82652dca">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=11&amp;id=6512bd43d9caa6e02c990b0a82652dca">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=11&amp;id=6512bd43d9caa6e02c990b0a82652dca">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">CODECHEF</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=12&amp;id=c20ad4d76fe97759aa27a0c99bff6710">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=12&amp;id=c20ad4d76fe97759aa27a0c99bff6710">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=12&amp;id=c20ad4d76fe97759aa27a0c99bff6710">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">NSS</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=13&amp;id=c51ce410c124a10e0db5e4b97fc2af39">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=13&amp;id=c51ce410c124a10e0db5e4b97fc2af39">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=13&amp;id=c51ce410c124a10e0db5e4b97fc2af39">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">ACES</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=14&amp;id=aab3238922bcc25a6f606eb525ffdc56">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=14&amp;id=aab3238922bcc25a6f606eb525ffdc56">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=14&amp;id=aab3238922bcc25a6f606eb525ffdc56">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">HOBBY CLUB</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=15&amp;id=9bf31c7ff062936a96d3c8bd1f8f2ff3">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=15&amp;id=9bf31c7ff062936a96d3c8bd1f8f2ff3">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=15&amp;id=9bf31c7ff062936a96d3c8bd1f8f2ff3">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">IIIE</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=16&amp;id=c74d97b01eae257e44aa9d5bade97baf">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=16&amp;id=c74d97b01eae257e44aa9d5bade97baf">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=16&amp;id=c74d97b01eae257e44aa9d5bade97baf">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">SHAIDS</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=17&amp;id=70efdf2ec9b086079795c442636b55fb">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=17&amp;id=70efdf2ec9b086079795c442636b55fb">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=17&amp;id=70efdf2ec9b086079795c442636b55fb">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">CATT</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=4&amp;id=a87ff679a2f3e71d9181a67b7542122c">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=4&amp;id=a87ff679a2f3e71d9181a67b7542122c">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=4&amp;id=a87ff679a2f3e71d9181a67b7542122c">News</a></li>
+                          </ul>
+                      </li>
+                                                <li class="dropend">
+                          <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown">GITS</a>
+                          <ul class="dropdown-menu dropdown-submenu shadow">
+                              <li><a class="dropdown-item" href="/studentclubs/clubs.php?refreshRate=3&amp;id=eccbc87e4b5ce2fe28308fd9f2a7baf3">About</a></li>
+                              <li><a class="dropdown-item" href="/studentclubs/members.php?refreshRate=3&amp;id=eccbc87e4b5ce2fe28308fd9f2a7baf3">Members</a></li>
+
+				<li><a class="dropdown-item" href="/studentclubs/newsletter.php?refreshRate=3&amp;id=eccbc87e4b5ce2fe28308fd9f2a7baf3">News</a></li>
+                          </ul>
+                      </li>
+                                        </ul>
+              </li>                            
+		
+</ul>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+  <section class="computerspreadnav" style="border-top:1px solid #2a2b51!important;">
+    <div class="container">
+        <div class="computerspreadnavcontainer computerspreadnavcontainer1">
+        <div class="dropdown">
+                        <a class="nav-link active" href="/index2.html" style="font-weight:300;color: white!important;padding:0px!important;" type="button">
+                Home
+            </a>
+        </div>
+        <div class="dropdown" id="abtdrp">
+            <a class="nav-link active dropdown-toggle" style="font-weight:300;color: white!important;padding:0px!important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                About 
+            </a>
+            <ul class="dropdown-menu computerspreadnavdropdown shadow">
+              <li><a class="dropdown-item" href="#" style="color: #10185a">History</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Vision & Mission</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Trustees</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Managing Director's Desk</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Principal's Desk</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Governance</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Affiliations</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Administration and Committees</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Institute's Roadmap/a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Service Regulation</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Qualifications and Eligiblity <br>Norms for Recruitment</a></li>
+              <li><a class="dropdown-item" href="#" style="color: #10185a">Best Practices</a></li>
+            </ul>
+        </div>
+
+<div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admissions
+          </a>
+          <ul class="dropdown-menu">
+                                    <li class="dropend">
+            <a href="#" class="dropdown-item">Admission Process</a>
+                                  </li><li class="dropend">
+            <a href="#" class="dropdown-item">Under Graduate</a>
+                                  </li><li class="dropend">
+            <a href="#" class="dropdown-item"> Post Graduate</a>
+                                  </li><li class="dropend">
+            <a href="#" class="dropdown-item">PhD</a>
+                                  </li><li class="dropend">
+            <a href="#" class="dropdown-item">Fee Payment</a>
+                                  </li><li class="dropend">    
+
+          </li></ul>
+</div>
+        <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Academics
+                        </a>
+                        <ul class="dropdown-menu" style="translate:0 60px;">
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">Home</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">Academic Handbook</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">Academic Handbook for Honours and Minors</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">Academic Calender</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">Examinations</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">APMS</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">LMS</a></li>
+                                                            <li><a style="color: #10185a" class="dropdown-item" href="#">Stakeholder Feedback on Syllabus</a></li>
+                                                    </ul>
+                    </div>
+         <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Departments
+                        </a>
+                        <ul class="dropdown-menu">
+                                                  <li class="dropend">
+                          <a href="#" class="dropdown-item">Home</a>
+                                                </li><li class="dropend">
+                          <a href="#" class="dropdown-item">Computer Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="#" class="dropdown-item">Mechanical Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="#" class="dropdown-item">Information Technology</a>
+                                                </li><li class="dropend">
+                          <a href="#" class="dropdown-item">Electronics and Telecommunication Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="#" class="dropdown-item">Electrical Engineering</a>
+                                                </li><li class="dropend">
+                          <a href="#" class="dropdown-item">Basic Sciences and Humanities</a>
+                                                </li><li class="dropend">
+                        </li></ul>
+         </div>
+                  <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Training &<br> Placements
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Home</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Vision and Mission</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Code of Conduct</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Vision and Mission</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Placement Officer</a></li>
+                            <li><a class="dropdown-item" href="#" style="color: #10185a">Placement Team</a></li>
+
+                        </ul>
+                    </div>
+	<div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Research &<br> Publications
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Home</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Research Projects</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Publications</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Books Published</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Consultancy Projects</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Patents</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Code of Conduct</a></li>
+				                        </ul>
+                    </div>
+
+                    <div class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Student Corner
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" style="color: #10185a">Home</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Code of Conduct</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Student Council</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Professional Bodies</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">National Service Scheme</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Student Clubs</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Infrastructure</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Cultural Activities</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Anti Ragging</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Student Satisfaction Survey</a></li>
+
+                      </ul>
+                  </div>
+
+                  <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Alumni
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" style="color: #10185a">About</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Events and News</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Distinguished Alumni</a></li>
+                          <li><a class="dropdown-item" href="#" style="color: #10185a">Fr.C.R.I.T, Alma Connect</a></li>
+
+
+                    </ul>
+                </div>
+
+                <div class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" style="color: white;padding:0px!important;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      NBA/NAAC
+                  </a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#" style="color: #10185a">Home</a></li>
+                        <li><a class="dropdown-item" href="#" style="color: #10185a">NAAC</a></li>
+                        <li><a class="dropdown-item" href="#" style="color: #10185a">NBA</a></li>
+                        <li><a class="dropdown-item" href="#" style="color: #10185a">IQAC</a></li>
+                        <li><a class="dropdown-item" href="#" style="color: #10185a">Best Practices</a></li>
+
+                  </ul>
+              </div>
+        <a class="nav-link active" style="font-weight:300;color: white!important;padding:0px!important;" aria-current="page" href="https://library.fcrit.ac.in/">LIBRARY</a>
+        </div>
+        
+    </div>
+  </section>
+  <br>      
+  <br>  
+  <div class="header-section">
+    <h1 style="text-align: center; color: black;">Information Technology</h1>
+    <hr style="width: 10%; margin: auto; border: 2px solid #d40d0d;">
+</div>
+<br>
+
+<div class="container mt-5">
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+<li class="nav-item" role="presentation">
+    <button class="nav-link active mr-3" style="background-color: #08999a;" id="introduction-tab" data-bs-toggle="tab" data-bs-target="#introduction" type="button" role="tab" aria-controls="introduction" aria-selected="true"><a style="color: black;">About</a></button>
+</li>
+<li class="nav-item" role="presentation">
+    <button class="nav-link mr-3" id="HOD-tab" data-bs-toggle="tab" data-bs-target="#HOD" type="button" role="tab" aria-controls="#HOD" aria-selected="false"><a style="color: black;" href="indexstaff1.html">HOD</a></button>
+</li>
+<li class="nav-item" role="presentation">
+    <button class="nav-link mr-3" id="peo-tab" data-bs-toggle="tab" data-bs-target="#peo" type="button" role="tab" aria-controls="peo" aria-selected="false"><a style="color: black;"href="indexstaff.html">Committees and Board of Studies</a></button>
+</li>
+<li class="nav-item" role="presentation">
+    <button class="nav-link mr-3" id="programs-tab" data-bs-toggle="tab" data-bs-target="#programs" type="button" role="tab" aria-controls="programs" aria-selected="false"><a style="color: black;"href="indexstaff.html">Infrastructure</a></button>
+</li>
+<li class="nav-item" role="presentation">
+    <button class="nav-link mr-3" id="syllabus-tab" data-bs-toggle="tab" data-bs-target="#syllabus" type="button" role="tab" aria-controls="syllabus" aria-selected="false"><a style="color: black;"href="acti.html">Activities</a></button>
+</li>
+<li class="nav-item" role="presentation">
+    <button class="nav-link mr-3" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"><a style="color: black;"href="indexstaff.html">Student Association</a></button>
+</li>
+<li class="nav-item" role="presentation">
+    <button class="nav-link mr-3" id="programs-tab" data-bs-toggle="tab" data-bs-target="#programs" type="button" role="tab" aria-controls="programs" aria-selected="false"><a style="color: black;"href="indexstaff.html">Magazine</a></button>
+</li>
+
+</ul>
+
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="introduction" role="tabpanel" aria-labelledby="introduction-tab">
+    <br><p style="font-size: large;">
+        Engineering in Information technology deals with the study of designing, development, implementation, support or management of computer-based information systems, particularly software applications and computer hardware. It involves the use of electronic computers and computer software to convert, store, protect, process, transmit, and securely retrieve information.The four year Information Technology Degree Course was started in the year 2001. The present intake of students is 60. The course includes Programming Techniques and Basic Sciences at first year level. In second and third year the course includes basic and core Information Technology subjects. The advanced topics such as Computer Simulation and Modelling, Mobile Computing, Image Processing, Management Information Systems, Data Warehousing and Mining System, Multimedia Systems, Project Management are included as compulsory subjects in the final year. Students of this program have been successfully placed at Global companies such as Infosys, TCS, Satyam, HCL, Virtusa, Wipro, and CTS.</p>
+        <br>
+        <br>
+        <br>
+        <div class="section">
+            <h1 style="color: black;">Vision and Mission</h1>
+            <br>
+            <br>
+    
+            <h2 style="color: black;">Vision:</h2>
+            <p style="font-size: large;">To become a leading center of excellence for quality education, advance research and development in the field of Information Technology for self-sustaining professionals.</p>
+            <br>
+            <br>
+            <br>
+            <h2 style="color: black;">Mission:</h2>
+            <ul>
+                <li style="font-size: large;">To provide industry oriented quality education and training to students related to cutting edge technologies in the field of information technology.</li>
+                <li style="font-size: large;">To promote multidisciplinary activities that inspires students to serve society through innovative applications.</li>
+                <li style="font-size: large;">To promote entrepreneurship skills in students with overall personality development.</li>
+            </ul>
+    
+            <button class="btn" style="background-color:#08999a;;">ROADMAP</button>
+        </div>
+    <br>
+    <br>
+        <div class="section">
+            <h1 style="color: black;">PEOs, PSOs and Board of Studies/Course Outcomes</h1>
+            <br>
+            <br>
+    
+            <h2 style="color: black;">Program Educational Objectives (PEO):</h2>
+            <p style="font-size: large;">Graduate will be able to:</p>
+            <ul>
+                <li style="font-size: large;">Adapt technological changes in the field of information technology.</li>
+                <li style="font-size: large;">Excel in higher education and professional career.</li>
+                <li style="font-size: large;">Demonstrate multidisciplinary and entrepreneurship skills.</li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        </div>
+</div>
+
+</div>
+<!-- Add similar content for other tabs -->
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <br>
+    <br>
+
+    <footer>
+        <div class="container footercontent">
+        <div class="resources footercard">
+          <h3>FR. C. RODRIGUES INSTITUTE OF TECHNOLOGY</h3>
+          <a href="https://mu.ac.in/">
+            Agnel Technical Education Complex<br>
+            Sector 9-A, Vashi, Navi Mumbai,<br>
+            Maharashtra, India<br>
+            PIN - 400703<br><br>CONTACT<br>(022) 27661924 , 27660619, 27660714, 27660715<br>
+            (022) 27660619<br>
+           principal@fcrit.ac.in</a>
+        </div>
+        <div class="contact footercard">
+          <h3>SITEMAP</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.732104486297!2d72.98912937520537!3d19.07551268212892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6cae0d8c5ab%3A0xbbf4481d662ca2d8!2sFr.%20Conceicao%20Rodrigues%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1728475488792!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+        <div class="container footerfooter">
+            <div class="d-flex align-items-center footeraj">
+                <div class="footerimg">
+                    <img src="images/fcritlogo.webp" alt="">
+                </div>
+                <div class="footertext">
+                    <p class="nagar"></p>
+                    <p class="datta">FR. C. RODRIGUES INSTITUTE OF TECHNOLOGY</p>
+                </div>
+            </div>
+            <div class="footercpy">
+                <p class="cpyr">Copyright <span style="color:#FFCB0B;">©</span></p>
+                <p class="cpya">All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+ 
+
+
+
+</body></html>
